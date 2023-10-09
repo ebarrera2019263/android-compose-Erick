@@ -7,6 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MealsWebService {
 
+// servicio en donde se utiliza la api
+
     private val api: MealsApi
 
     init {
@@ -18,7 +20,7 @@ class MealsWebService {
         api = retrofit.create(MealsApi::class.java)
     }
 
-    fun getMeals(): Call<MealsCategoriesResponse> {
+    suspend fun getMeals(): MealsCategoriesResponse {
         return api.getMeals()
     }
 }

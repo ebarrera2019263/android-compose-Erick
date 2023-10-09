@@ -4,7 +4,12 @@ import com.zezzi.eventzezziapp.data.networking.response.MealsCategoriesResponse
 import retrofit2.Call
 import retrofit2.http.GET
 
+
+// Metodo get la cual nos lista las categorias de la api
+
+
+
 interface MealsApi {
     @GET("categories.php")
-    fun getMeals(): Call<MealsCategoriesResponse>
+    suspend fun getMeals(): MealsCategoriesResponse
 }
